@@ -1,3 +1,4 @@
+
 // before rum
 //npm install express
 
@@ -9,7 +10,7 @@
 const express = require('express');
 
 // Constants
-const PORT = 8080;
+const PORT = 80;
 const HOST = '0.0.0.0';
 const OS = require('os');
 const ENV = 'DEV';
@@ -19,13 +20,19 @@ const ENV = 'DEV';
 const app = express();
 app.get('/', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello from Node!';
+  const msg = 'Hello from junjie!';
   res.send(msg);
 });
 
 app.get('/test', (req, res) => {
   res.statusCode = 200;
   const msg = 'Hello from /test Node!';
+  res.send(msg);
+});
+
+app.get('/welcome', (req, res) => {
+  res.statusCode = 200;
+  const msg = 'Hello from /welcome Jun Jie Node!';
   res.send(msg);
 });
 
